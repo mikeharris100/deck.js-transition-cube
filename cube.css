@@ -17,19 +17,25 @@
       -ms-transition: all 1s ease-in-out 0ms;
       -o-transition: all 1s ease-in-out 0ms;
       transition: all 1s ease-in-out 0ms; }
-    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-previous, .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-next {
-      opacity: 0; }
-    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-previous {
+      .csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .slide {
+        -webkit-transition: all 1s ease-in-out 0ms;
+        -moz-transition: all 1s ease-in-out 0ms;
+        -ms-transition: all 1s ease-in-out 0ms;
+        -o-transition: all 1s ease-in-out 0ms;
+        transition: all 1s ease-in-out 0ms; }
+    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-previous:not(.deck-child-current),
+    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-before:not(.deck-child-current) {
       -webkit-transform: rotateY(-90deg) translateZ(400px) translateX(-400px);
       -moz-transform: rotateY(-90deg) translateZ(400px) translateX(-400px);
       -ms-transform: rotateY(-90deg) translateZ(400px) translateX(-400px);
       -o-transform: rotateY(-90deg) translateZ(400px) translateX(-400px);
-      transform: rotateY(-90deg) translateZ(400px) translateX(-400px); }
-    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-next {
+      transform: rotateY(-90deg) translateZ(400px) translateX(-400px);
+      opacity: 0; }
+    .csstransitions.csstransforms .deck-container:not(.deck-menu) .deck-next:not(.deck-child-current),
+    .csstransitions.csstransforms .deck-container:not(.deck-menu) .deck-after:not(.deck-child-current) {
       -webkit-transform: rotateY(90deg) translateZ(400px) translateX(400px);
       -moz-transform: rotateY(90deg) translateZ(400px) translateX(400px);
       -ms-transform: rotateY(90deg) translateZ(400px) translateX(400px);
       -o-transform: rotateY(90deg) translateZ(400px) translateX(400px);
-      transform: rotateY(90deg) translateZ(400px) translateX(400px); }
-    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-before, .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-after {
-      display: none; }
+      transform: rotateY(90deg) translateZ(400px) translateX(400px);
+      opacity: 0; }

@@ -23,9 +23,9 @@
 }
 
 .csstransitions.csstransforms {
-    
-    @include perspective(1000);	
-	
+
+    @include perspective(1000);
+
 	.deck-container:not(.deck-menu) {
 	    overflow:hidden;
 
@@ -36,23 +36,22 @@
 			margin-left:-400px;
 			width:800px;
             @include transition(all, 1s);
-			
+            .slide{
+                @include transition(all, 1s);
+            }
 		}
 
-		> .deck-previous, > .deck-next {
-            opacity:0;
-        }
-        
-		> .deck-previous {
+		> .deck-previous:not(.deck-child-current),
+		> .deck-before:not(.deck-child-current) {
             @include transform(rotateY(   -90deg ) translateZ(400px) translateX(-400px));
+            opacity:0;
 	    }
 
-		> .deck-next {
+		.deck-next:not(.deck-child-current),
+		.deck-after:not(.deck-child-current) {
             @include transform(rotateY(   90deg ) translateZ(400px) translateX(400px));
+            opacity:0;
 		}
 
-		> .deck-before, > .deck-after {
-		    display:none;
-		}
 	}
 }
